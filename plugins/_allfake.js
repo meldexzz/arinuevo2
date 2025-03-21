@@ -9,7 +9,7 @@ let img = catalogo
     forwardedNewsletterMessageInfo: {
       newsletterJid: "",
       serverMessageId: 100,
-      newsletterName: '𝘽𝙊𝙏 | 𝙈𝙀𝙎𝙄𝙏𝙊🦥',
+      newsletterName: '𝘼𝙧𝙞𝘽𝙤𝙩.🌱',
     },
 	    externalAdReply: {
 				    showAdAttribution: true,
