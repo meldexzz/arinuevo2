@@ -11,7 +11,7 @@ import moment from 'moment-timezone'
 
 global.owner = [
   ['5215649707515', 'Mesito⁩', true],
-  ['5219985011412']
+  ['5219997838638']
 ]
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -22,12 +22,12 @@ global.prems = []
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.packname = ``
-global.author = '{\n "𝘽𝙊𝙏": {\n   "name": "𝘽𝙊𝙏 | 𝙈𝙀𝙎𝙄𝙏𝙊 🦥",\n     "author": "Mesito / Meldexzz",\n   "status_bot": "active"\n }\n}'
-global.wait = '🐢 𝘽𝙊𝙏 | 𝙈𝙀𝙎𝙄𝙏𝙊 🦥'
-global.botname = '𝘽𝙊𝙏 | 𝙈𝙀𝙎𝙄𝙏𝙊 🦥'
+global.author = '{\n "𝘽𝙊𝙏": {\n   "name": "𝘼𝙧𝙞𝘽𝙤𝙩.🌱",\n     "author": "Ary / Meldexzz",\n   "status_bot": "active"\n }\n}'
+global.wait = '𝘼𝙧𝙞𝘽𝙤𝙩.🌱'
+global.botname = '𝘼𝙧𝙞𝘽𝙤𝙩.🌱'
 global.textbot = `Power By Bolillo-Team`
-global.listo = '*🦥 Aqui tiene*'
-global.namechannel = '𝘽𝙊𝙏 | 𝙈𝙀𝙎𝙄𝙏𝙊 🦥'
+global.listo = '* Aqui tiene*'
+global.namechannel = '𝘼𝙧𝙞𝘽𝙤𝙩.🌱'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
@@ -36,8 +36,8 @@ global.miniurl = fs.readFileSync('./storage/img/miniurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.group = 'https://chat.whatsapp.com/Bb7t3aHQJht3FVMwh6TdGc'
-global.canal = 'https://whatsapp.com/channel/0029Vb9OksWAu3aTA01cva0d'
+global.group = ''
+global.canal = ''
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
