@@ -21,8 +21,10 @@ const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, co
     teks += `┊${customEmoji} @${mem.id.split('@')[0]}\n`;
   }
   teks += `
+  
   𝘼𝙧𝙞𝘽𝙤𝙩.🌱
-☆━━━━━━━☆`;
+  
+˚ʚ♡ɞ˚━━━━━━━˚ʚ♡ɞ˚`;
 
   conn.sendMessage(m.chat, { text: teks, mentions: participants.map((a) => a.id) });
 };
