@@ -10,7 +10,7 @@ try {
 let users = participants.map(u => conn.decodeJid(u.id))
 let q = m.quoted ? m.quoted : m || m.text || m.sender
 let c = m.quoted ? await m.getQuotedObj() : m.msg || m.text || m.sender
-let messageText = `${text || q.text}\n\n𝘼𝙧𝙞𝘽𝙤𝙩.🌱\n☆━━━━━━━☆`
+let messageText = `${text || q.text}\n\n𝘼𝙧𝙞𝘽𝙤𝙩.🌱\n˚ʚ♡ɞ˚━━━━━━━˚ʚ♡ɞ˚`
 let msg = conn.cMod(m.chat, generateWAMessageFromContent(m.chat, { [m.quoted ? q.mtype : 'extendedTextMessage']: m.quoted ? c.message[q.mtype] : { text: messageText }}, { quoted: null, userJid: conn.user.id }), messageText, conn.user.jid, { mentions: users })
 await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
 
@@ -26,7 +26,7 @@ let mime = (quoted.msg || quoted).mimetype || ''
 let isMedia = /image|video|sticker|audio/.test(mime)
 let more = String.fromCharCode(8206)
 let masss = more.repeat(850)
-let htextos = `${text ? text : "*Hola!!*"}\n\n𝘼𝙧𝙞𝘽𝙤𝙩.🌱\n☆━━━━━━━☆`
+let htextos = `${text ? text : "*Hola!!*"}\n\n𝘼𝙧𝙞𝘽𝙤𝙩.🌱\n˚ʚ♡ɞ˚━━━━━━━˚ʚ♡ɞ˚`
 
 if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
 var mediax = await quoted.download?.()
