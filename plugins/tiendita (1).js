@@ -52,7 +52,7 @@ const handler = async (m, { conn }) => {
 𝘼𝙧𝙞𝘽𝙤𝙩 / 𝘼𝙧𝙮 🌱`;
 
   // Ruta local de la imagen (cambia esta ruta a la ubicación correcta en tu servidor)
-  let imgPath = './ruta/a/tu/imagen.jpg'; // Ruta local
+  let img = catalogo; // Asegúrate de que esta variable esté correctamente definida y accesible
 
   // Envía la imagen y el mensaje al grupo
   await conn.sendMessage(m.chat, {
