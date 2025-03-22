@@ -1,44 +1,38 @@
-import { WAMessageStubType } from '@whiskeysockets/baileys';
-
 export async function before(m, { conn, participants, groupMetadata }) {
-  // Verifica que sea un mensaje de grupo y que tenga el tipo de mensaje esperado
-  if (!m.messageStubType || !m.isGroup) return true;
-
-  const userJid = m.messageStubParameters[0];
-  let taguser = `@${userJid.split('@')[0]}`;
-
-  // Obtiene la configuración del chat
-  let chat = global.db.data.chats[m.chat];
+  if (!m.messageStubType || !m.isGroup) return true;  // Solo se activa en grupos y para ciertos tipos de mensajes
   
-  // Definir la imagen para la bienvenida o despedida (puede ser una URL o un buffer)
-  let img = 'https://example.com/welcome-image.jpg'; // Reemplaza con tu imagen
+  let chat = global.db.data.chats[m.chat];
+  let taguser = `@${m.sender.split('@')[0]}`;
+  let userJid = m.messageStubParameters[0];
+  let img = catalogo; // Asegúrate de que esta variable esté correctamente definida y accesible
 
-  // Solo se procesan los mensajes de bienvenida/despedida
-  if (chat.welcome) {
+  // Verifica si la bienvenida está habilitada
+  if (chat.bienvenida) {
+    console.log('Bienvenida activada');
     let message = '';
     
-    // Mensaje de bienvenida
-    if (m.messageStubType == 27) {
+    // Revisa el tipo de mensaje para determinar si es una bienvenida, despedida o expulsión
+    console.log('Tipo de mensaje:', m.messageStubType);
+    if (m.messageStubType == 27) {  // Nuevo miembro
       message = chat.sWelcome
         ? chat.sWelcome.replace('@user', taguser).replace('@subject', groupMetadata.subject)
         : `_🙂 Hola *${taguser}* Bienvenid@ al grupo *${groupMetadata.subject}*_`;
-    
-    // Mensaje de despedida (cuando alguien sale)
-    } else if (m.messageStubType == 32) {
+    } else if (m.messageStubType == 32) {  // Miembro salió
       message = chat.sBye
         ? chat.sBye.replace('@user', taguser).replace('@subject', groupMetadata.subject)
         : `_👋 *${taguser}* Ha abandonado el grupo_`;
-    
-    // Mensaje de expulsión
-    } else if (m.messageStubType == 28) {
+    } else if (m.messageStubType == 28) {  // Miembro expulsado
       message = chat.sBye
         ? chat.sBye.replace('@user', taguser).replace('@subject', groupMetadata.subject)
         : `_☠️ *${taguser}* Fue expulsad@ del grupo_`;
     }
 
-    // Si hay un mensaje definido, se envía
+    // Si hay mensaje, envíalo
     if (message) {
+      console.log('Mensaje a enviar:', message);  // Verifica que el mensaje esté correcto
       await conn.sendMessage(m.chat, { image: img, caption: message, mentions: [userJid] });
     }
+  } else {
+    console.log('Bienvenida desactivada');
   }
 }
