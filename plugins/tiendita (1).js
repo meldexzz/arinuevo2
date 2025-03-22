@@ -1,5 +1,3 @@
-import fs from 'fs';  // Asegúrate de importar 'fs' si no lo tienes
-
 const handler = async (m, { conn }) => {
   const mensaje = `╔═══════════════╗
 ┇➤𝙏𝙄𝙀𝙉𝘿𝙄𝙏𝘼 𝘼𝙧𝙞𝘽𝙤𝙩 / 𝘼𝙧𝙮 🌱
