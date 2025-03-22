@@ -4,16 +4,16 @@ const handler = async (m, { conn }) => {
 ╚═══════════════╝
 ▸▸𝘾𝙊𝙈𝘼𝙉𝘿𝙊𝙎 𝘿𝙄𝙎𝙋𝙊𝙉𝙄𝘽𝙇𝙀𝙎◂◂
 
-▸▸ 𝘾𝙊𝙈𝘼𝙍 ◂◂
+▸▸ 𝘾𝙊𝙈𝙋𝘿𝙇𝘼◂◂
 │┊➺ 🛒 .𝘤𝘰𝘮𝘱𝘳𝘢𝘳
 │┊➺ 📦 .𝘤𝘢𝘵𝘢𝘭𝘰𝘨𝘰
-╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙  
+╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙  
 
 ▸▸ 𝙀𝙎𝙋𝙀𝘾𝙄𝘼𝙇𝙀𝙎 ◂◂
 │┊➺ 🎁 .𝘰𝘧𝘦𝘳𝘵𝘢𝘴
 │┊➺ 🔥 .𝘤𝘰𝘮𝘣𝘰𝘴
 │┊➺ 🎊 .𝘴𝘰𝘳𝘵𝘦𝘰
-╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙  
+╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙  
 
 ▸▸ 𝘿𝙄𝙎𝙋𝙊𝙉𝙄𝘽𝙇𝙀𝙎 ◂◂
 │┊➺ 📺 .𝘱𝘭𝘦x
@@ -22,7 +22,7 @@ const handler = async (m, { conn }) => {
 │┊➺ 🖼️ .𝘤𝘢𝘯𝘷𝘢
 │┊➺ 🎬 .𝘯𝘦𝘹𝘵𝘧𝘪𝘹
 │┊➺ 🏰 .𝘥𝘪𝘴𝘯𝘦𝘺
-│┊➺ 📡 .𝘩𝘣𝘰𝘮𝘢𝘹
+│┊➺ 📡 .𝘩𝘣𝘰𝘮𝘢𝘩
 │┊➺ 💼 .𝘤𝘢𝘯𝘷𝘢𝘰𝘧𝘧𝘪𝘤𝘦
 │┊➺ ✂️ .𝘤𝘢𝘱𝘤𝘶𝘵
 │┊➺ 📜 .𝘯𝘶𝘦𝘷𝘰𝘴
@@ -31,7 +31,7 @@ const handler = async (m, { conn }) => {
 │┊➺ 🔒 .𝘨𝘢𝘳𝘢𝘯𝘵𝘪𝘢
 │┊➺ 📝 .𝘳𝘦𝘨𝘭𝘢𝘴
 │┊➺ 🧾 .𝘤𝘶𝘦𝘯𝘵𝘢
-╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙  
+╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙  
 
 ▸▸ 𝙎𝙏𝙄𝘾𝙆𝙀𝙍𝙎 ◂◂
 │┊➺ 🚚 .𝘦𝘯𝘵𝘳𝘦𝘨𝘢
@@ -51,14 +51,14 @@ const handler = async (m, { conn }) => {
 ╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙  
 𝘼𝙧𝙞𝘽𝙤𝙩 / 𝘼𝙧𝙮 🌱`;
 
-  // Ruta local de la imagen (cambia esta ruta a la ubicación correcta en tu servidor)
-  let img = catalogo; // Asegúrate de que esta variable esté correctamente definida y accesible
+  // Define la ruta de la imagen (local o URL)
+  let img = catalogo; // Asegúrate de que 'catalogo' tenga la ruta correcta de la imagen.
 
-  // Envía la imagen y el mensaje al grupo
+  // Envía el mensaje y la imagen en un solo mensaje.
   await conn.sendMessage(m.chat, {
-    image: fs.readFileSync(imgPath),  // Usamos 'fs.readFileSync()' para leer la imagen local
-    caption: mensaje,                // El texto que quieres enviar junto a la imagen
-  }, { quoted: m });  // Para mantener la referencia al mensaje original si es necesario
+    image: { url: img },  // Si 'img' es una URL o ruta accesible, lo puedes usar directamente.
+    caption: mensaje,     // El texto que acompañará la imagen.
+  }, { quoted: m });
 };
 
 handler.command = /^(tiendita|tienda|shop)$/i;
