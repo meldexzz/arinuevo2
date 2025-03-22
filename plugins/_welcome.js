@@ -1,55 +1,37 @@
-import { WAMessageStubType } from '@whiskeysockets/baileys';
-import fetch from 'node-fetch';
+ import { WAMessageStubType } from '@whiskeysockets/baileys'
 
-// Función para obtener el nombre del usuario
-async function getUserName(conn, jid) {
-  let name = await conn.getName(jid);
-  if (!name) {
-    const contact = await conn.fetchContact(jid);
-    name = contact?.notify || contact?.name || jid.split('@')[0];
-  }
-  return name;
-}
 
 export async function before(m, { conn, participants, groupMetadata }) {
-  if (!m.messageStubType || !m.isGroup) return !0;
+  if (!m.messageStubType || !m.isGroup) return !0
 
-  let top = `*╭─${em}─── ⫍📢⫎ ───${em}─╮*\n`;
-  let bottom = `\n*╰─${em}─── ⫍📢⫎ ───${em}─╯*`;
-  let chat = global.db.data.chats[m.chat];
 
-  // Obtener foto de perfil
-  let pp = await conn
-    .profilePictureUrl(m.messageStubParameters[0], 'image')
-    .catch(() => 'https://files.catbox.moe/f2lebz.jpg');
-  let thumb = await (await fetch(pp)).buffer();
+  let taguser = `@${who.split('@')[0]}`
+  let chat = global.db.data.chats[m.chat]
 
-  // Obtener nombre del usuario
-  const userJid = m.messageStubParameters[0];
-  const userName = await getUserName(conn, userJid);
+  
+  const userJid = m.messageStubParameters[0]
+  let img = catalogo;
 
-  if (chat.bienvenida && m.messageStubType == 27) {
-    let welcome = chat.sWelcome
-      ? chat.sWelcome.replace('@user', userName)
-      : `${top}_🙂 Hola *${userName}* Bienvenid@ al grupo *${groupMetadata.subject}*_${bottom}`;
+ 
 
-    await conn.sendAiri(m.chat, botname, botdesc, welcome, false, thumb, null, null);
+  if (chat.welcome) {
+    let message = ''
+    if (m.messageStubType == 27) {
+      message = chat.sWelcome
+        ? chat.sWelcome.replace('@user', taguser).replace('@subject', groupMetadata.subject)
+        : `_🙂 Hola *${taguser}* Bienvenid@ al grupo *${groupMetadata.subject}*_`
+    } else if (m.messageStubType == 32) {
+      message = chat.sBye
+        ? chat.sBye.replace('@user', taguser).replace('@subject', groupMetadata.subject)
+        : `_👋 *${taguser}* Ha abandonado el grupo_`
+    } else if (m.messageStubType == 28) {
+      message = chat.sBye
+        ? chat.sBye.replace('@user', taguser).replace('@subject', groupMetadata.subject)
+        : `_☠️ *${taguser}* Fue expulsad@ del grupo_`
+    }
+
+    if (message) {
+      await conn.sendMessage(m.chat, { image: img, caption: message, mentions: [userJid] })
+    }
   }
-
-  if (chat.bienvenida && m.messageStubType == 32) {
-    let bye = chat.sBye
-      ? chat.sBye.replace('@user', userName)
-      : `${top}_👋 *${userName}* Ha abandonado el grupo_${bottom}`;
-
-    await conn.sendAiri(m.chat, botname, botdesc, bye, false, thumb, null, null);
-  }
-
-  if (chat.bienvenida && m.messageStubType == 28) {
-    let kick = chat.sBye
-      ? chat.sBye.replace('@user', userName)
-      : `${top}_☠️ *${userName}* Fue expulsad@ del grupo_${bottom}`;
-
-    await conn.sendAiri(m.chat, botname, botdesc, kick, false, thumb, null, null);
-  }
-} 
-		       
+}
