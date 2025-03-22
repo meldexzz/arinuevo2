@@ -4,8 +4,11 @@ export async function before(m, { conn }) {
   // Convertimos el mensaje a minúsculas para que no importe si escriben "Gracias", "GRACIAS" o "gracias"
   let messageText = m.text.toLowerCase().trim();
 
-  // Si el mensaje contiene la palabra "gracias" (sin importar si está sola o acompañada de otras palabras)
+  // Comprobamos si el mensaje contiene "gracias"
   if (messageText.includes('gracias')) {
+    // Verificamos que el mensaje no sea del bot
+    if (m.sender === conn.user.jid) return;
+
     // Responde con un mensaje de agradecimiento
     await conn.sendMessage(m.chat, {
       text: '¡Muchas gracias a ti! 😊',
