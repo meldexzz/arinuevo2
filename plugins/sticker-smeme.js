@@ -15,5 +15,5 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['smeme <texto>']
 handler.tags = ['sticker']
 handler.command = ["smeme"]
-handler.register = true 
+handler.register = false 
 export default handler
