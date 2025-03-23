@@ -12,5 +12,5 @@ conn.sendFile(m.chat, url, 'tweet.png', '*Gracias por comentar*', m)
 handler.help = ['tweet <comentario>']
 handler.tags = ['logo']
 handler.command = ['tweet']
-handler.register = true 
+handler.register = false 
 export default handler
