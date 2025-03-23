@@ -11,5 +11,5 @@ await conn.reply(m.chat, msg, m)
 handler.help = ['ai *<petición>*']
 handler.tags = ['tools']
 handler.command = /^(sumi|ai|ia|chatgpt|gpt)$/i
-handler.register = true
+handler.register = false
 export default handler
