@@ -43,5 +43,5 @@ let handler = async (m, { conn }) => {
 handler.tags = ['tools']
 handler.help = ['ibb']
 handler.command = /^(ibb)$/i
-handler.register = true 
+handler.register = false 
 export default handler
