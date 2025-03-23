@@ -23,6 +23,6 @@ await conn.sendFile(m.chat, pp, 'thumbnail.jpg', txt, m)
 handler.help = ['perfil', 'perfil @user']
 handler.tags = ['rg']
 handler.command = ['perfil', 'profile']
-handler.register = true
+handler.register = false
 
 export default handler
