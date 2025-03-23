@@ -19,6 +19,6 @@ handler.help = ['ver']
 handler.tags = ['tools']
 handler.command = ['readviewonce', 'read', 'ver', 'readvo'] 
 //handler.limit = 1
-handler.register = true 
+handler.register = false 
 
 export default handler
