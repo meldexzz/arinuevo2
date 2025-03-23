@@ -19,6 +19,6 @@ await conn.sendMessage(m.chat, {document: { url: dl_url }, mimetype: 'applicatio
 handler.help = ['aptoide <búsqueda>']
 handler.tags = ['downloader']
 handler.command = ['aptoide', 'apk']
-handler.register = true 
+handler.register = false 
 //handler.limit = 5
 export default handler
