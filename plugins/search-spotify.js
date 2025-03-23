@@ -21,6 +21,6 @@ await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 handler.help = ['spotifysearch <búsqueda>']
 handler.tags = ['search']
 handler.command = ['spotifysearch']
-handler.register = true
+handler.register = false
 
 export default handler
