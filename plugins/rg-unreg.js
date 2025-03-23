@@ -11,6 +11,6 @@ handler.help = ['unreg']
 handler.tags = ['rg']
 
 handler.command = ['unreg'] 
-handler.register = true
+handler.register = false
 
 export default handler
