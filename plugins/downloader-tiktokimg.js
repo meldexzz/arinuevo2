@@ -21,7 +21,7 @@ handler.help = ['tiktokimg *<url>*']
 handler.tags = ['img', 'downloader']
 handler.command = /^(ttimg|tiktokimg)$/i
 export default handler;
-handler.register = true 
+handler.register = false 
 
 async function ttimg(link) {
     try {    
