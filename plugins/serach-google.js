@@ -17,5 +17,5 @@ conn.reply(m.chat, teks, m)
 handler.help = ['google <búsqueda>']
 handler.tags = ['tools', 'search']
 handler.command = /^googlef?$/i
-handler.register = true 
+handler.register = false 
 export default handler
