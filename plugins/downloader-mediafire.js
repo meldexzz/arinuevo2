@@ -19,6 +19,6 @@ await conn.sendFile(m.chat, dl_url, title, null, m, null, { mimetype: ext, asDoc
 handler.help = ['mediafire <url mf>']
 handler.tags = ['downloader']
 handler.command = ['mediafire', 'mdfire', 'mf']
-handler.register = true 
+handler.register = false 
 handler.limit = 500
 export default handler
