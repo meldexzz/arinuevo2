@@ -20,6 +20,6 @@ await conn.sendFile(m.chat, dl_url, title + '.mp3', `*🍭 Titulo ∙* ${title}\
 handler.help = ['ytmp3 <yt url>']
 handler.tags = ['downloader']
 handler.command = ['ytmp3', 'yta']
-handler.register = true 
+handler.register = false 
 //handler.limit = 1
 export default handler
