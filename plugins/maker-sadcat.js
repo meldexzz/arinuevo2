@@ -10,5 +10,5 @@ handler.help = ['sadcat <texto>']
 handler.tags = ['logo']
 handler.command = ['sadcat', 'catsad']
 //handler.limit = 1
-handler.register = true 
+handler.register = false 
 export default handler
