@@ -36,6 +36,6 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 handler.tags = ['downloader']
 handler.help = ['tiktokuser *<usuario>*']
 handler.command = ['tiktokuser', 'tiktokus']
-handler.register = true
+handler.register = false
 
 export default handler
