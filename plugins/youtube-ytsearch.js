@@ -21,5 +21,5 @@ await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 handler.help = ['ytsearch <búsqueda>']
 handler.tags = ['search']
 handler.command = ['ytsearch', 'yts']
-handler.register = true 
+handler.register = false 
 export default handler
