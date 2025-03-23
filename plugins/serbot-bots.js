@@ -20,7 +20,7 @@ async function handler(m, { conn: stars, usedPrefix }) {
   await stars.sendMessage(m.chat, { text: responseMessage, mentions: stars.parseMention(responseMessage) }, { quoted: m })
 }
 
-handler.command = ['listjadibot', 'bots']
-handler.help = ['bots']
-handler.tags = ['serbot']
+handler.command = ['sdfhlsfkldsjlfsd', 'sdugfoisdhfihsdoifsdf']
+handler.help = ['iosdjfpoidjspofjopdf']
+handler.tags = ['ipodsjfpojsdpofjpjdsf']
 export default handler
