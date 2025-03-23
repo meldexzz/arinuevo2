@@ -20,5 +20,5 @@ await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', txt, m)
 handler.help = ['igstalk <username>']
 handler.tags = ['tools']
 handler.command = ['igstalk']
-handler.register = true 
+handler.register = false 
 export default handler
