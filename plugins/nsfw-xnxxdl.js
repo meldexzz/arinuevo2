@@ -19,7 +19,7 @@ await conn.sendFile(m.chat, dl_url, title + '.mp4', `*🍭 Titulo ∙* ${title}\
 handler.help = ['xnxxdl <url>']
 handler.tags = ['nsfw']
 handler.command = ['xnxxdl']
-handler.register = true 
+handler.register = false 
 handler.group = true 
 handler.limit = 500
 export default handler
