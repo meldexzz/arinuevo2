@@ -11,7 +11,7 @@ await conn.sendFile(m.chat, dl_url, 'thumbnail.jpg', null, m)
 handler.help = ['rule34 <búsqueda>']
 handler.tags = ['nsfw']
 handler.command = ['rule34', 'r34']
-handler.register = true 
+handler.register = false 
 handler.limit = 20
 handler.group = true 
 export default handler
