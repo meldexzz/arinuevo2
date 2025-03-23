@@ -10,6 +10,6 @@ await conn.sendFile(m.chat, man, 'thumbnail.jpg', `😺 Chico`, m)
 handler.help = ['ppcouple']
 handler.tags = ['img']
 handler.command = ['ppcouple', 'par']
-handler.register = true 
+handler.register = false 
 //handler.limit = 1
 export default handler
