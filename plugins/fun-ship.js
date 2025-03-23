@@ -14,6 +14,6 @@ handler.help = ['ship']
 handler.tags = ['fun']
 handler.command = /^(ship)$/i
 
-handler.register = true
+handler.register = false
 
 export default handler
