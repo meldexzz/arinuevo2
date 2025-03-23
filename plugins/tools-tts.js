@@ -24,7 +24,7 @@ handler.help = ['tts <texto>']
 handler.tags = ['tools']
 handler.command = /^g?tts$/i
 //handler.limit = 1
-handler.register = true 
+handler.register = false 
 export default handler
 
 function tts(text, lang = 'es') {
