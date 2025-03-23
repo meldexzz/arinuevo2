@@ -22,6 +22,6 @@ handler.help = ['soundsearch <búsqueda>']
 handler.tags = ['search']
 handler.command = ['soundcloudsearch', 'soundsearch', 'sounds']
 //handler.limit = 1
-handler.register = true
+handler.register = false
 
 export default handler
