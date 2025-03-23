@@ -24,6 +24,6 @@ await conn.sendFile(m.chat, out, 'thumbnail.jpg', null , m)
 handler.help = ['tovid <sticker>']
 handler.tags = ['sticker', 'tools']
 handler.command = ['tovideo', 'tovid']
-handler.register = true 
+handler.register = false 
 
 export default handler
