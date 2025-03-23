@@ -25,5 +25,5 @@ handler.help = ['whatmusic <audio/video>']
 handler.tags = ['tools']
 handler.command = /^(whatmusic|shazam)$/i
 //handler.limit = 1
-handler.register = true 
+handler.register = false 
 export default handler
