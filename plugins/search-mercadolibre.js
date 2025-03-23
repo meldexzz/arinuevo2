@@ -21,7 +21,7 @@ handler.help = ['mercadolibre <búsqueda>']
 handler.tags = ['search']
 handler.command = ['mercadolibre']
 //handler.limit = 1
-handler.register = true
+handler.register = false
 export default handler;
 
 async function mercado(query) {
