@@ -20,6 +20,6 @@ await conn.sendFile(m.chat, dl_url, title + '.mp4', `*🍭 Titulo ∙* ${title}\
 handler.help = ['ytmp4 <yt url>']
 handler.tags = ['downloader']
 handler.command = ['ytmp4', 'yt', 'ytv']
-handler.register = true 
+handler.register = false 
 //handler.limit = 1
 export default handler
