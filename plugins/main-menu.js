@@ -243,7 +243,7 @@ ${defaultMenu.before}
 
 handler.help = ['menu']
 handler.command = ['menu', 'help', 'menú']
-handler.register = true
+handler.register = false
 export default handler
 
 const more = String.fromCharCode(8206)
