@@ -17,6 +17,7 @@ let handler = async (m, { conn }) => {
         '.gracias': './stickers/gracias.webp',
         '.soporte': './stickers/soporte.webp',
         '.refe': './stickers/refe.webp',
+        '.voy': './stickers/voy.webp',
     };
 
     // Verifica si el mensaje contiene un comando válido
@@ -31,6 +32,6 @@ let handler = async (m, { conn }) => {
     }
 };
 
-handler.command = ['entrega', 'pagorecib', 'espera', 'disfruta', 'invenv', 'renovacionecit', 'hastamañana', 'repo', 'relax', 'contactame', 'fueraservicio', 'gracias', 'soporte', 'refe'];
+handler.command = ['entrega', 'pagorecib', 'espera', 'disfruta', 'invenv', 'renovacionecit', 'hastamañana', 'repo', 'relax', 'contactame', 'fueraservicio', 'gracias', 'soporte', 'refe', 'voy'];
 handler.group = true;
 export default handler;
